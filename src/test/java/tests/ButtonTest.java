@@ -5,8 +5,12 @@ import org.testng.annotations.Test;
 public class ButtonTest extends BaseTest {
 
     @Test
-    public void buttonPositiveTest() {
+    public void checkGoToHomeButton() {
         basePage.clickOnButtonBlock();
         buttonPage.clickOnGoToHomeButton();
+        homePage.backToButtonPage();
+        buttonPage.checkH1Text();
     }
+
+
 }

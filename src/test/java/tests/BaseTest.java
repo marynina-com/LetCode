@@ -6,6 +6,8 @@ import com.codeborne.selenide.WebDriverRunner;
 import org.testng.annotations.BeforeMethod;
 import pages.BasePage;
 import pages.ButtonPage;
+import pages.FramePage;
+import pages.HomePage;
 
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
@@ -16,6 +18,9 @@ public class BaseTest {
 
     BasePage basePage = new BasePage();
     ButtonPage buttonPage = new ButtonPage();
+    FramePage framePage = new FramePage();
+    HomePage homePage = new HomePage();
+
 
     @BeforeMethod
     public void init() {
