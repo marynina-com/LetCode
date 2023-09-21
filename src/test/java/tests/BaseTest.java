@@ -15,7 +15,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class BaseTest {
 
-    Faker faker = new Faker();
+    public Faker faker = new Faker();
 
     private SelenideElement confirmation = $(byXpath("//p[normalize-space()='Consent']"));
 
@@ -35,4 +35,5 @@ public class BaseTest {
 
 //      Configuration.holdBrowserOpen=true;
     }
+
 }
