@@ -3,6 +3,7 @@ package tests;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
+import com.github.javafaker.Faker;
 import org.testng.annotations.BeforeMethod;
 import pages.BasePage;
 import pages.ButtonPage;
@@ -13,6 +14,8 @@ import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
 public class BaseTest {
+
+    Faker faker = new Faker();
 
     private SelenideElement confirmation = $(byXpath("//p[normalize-space()='Consent']"));
 

@@ -15,7 +15,6 @@ public class FramePage {
     private SelenideElement email = $(By.name("email"));
 
     public void fieldAllFields(String fName, String lName, String fEmail, String correctLName) {
-
         switchTo().frame(mainFrame);
 
         firstNameFrame.setValue(fName);

@@ -23,5 +23,4 @@ public class BasePage {
     public void clickOnFrameBlock(){
         frameBlock.click();
     }
-
 }
