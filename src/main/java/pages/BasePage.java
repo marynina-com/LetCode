@@ -3,6 +3,8 @@ package pages;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
+import java.util.Random;
+
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -14,6 +16,7 @@ public class BasePage {
     private final SelenideElement basePageSelectBlock = $x("//p[normalize-space()='Select']");
     private final SelenideElement dropDown = $x("//a[normalize-space()='Drop-Down']");
 
+    public static Random random = new Random();
 
     public void openBaseUrl() {
         open(BASE_URL);

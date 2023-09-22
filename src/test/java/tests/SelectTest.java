@@ -6,11 +6,20 @@ import pages.BasePage;
 public class SelectTest extends BaseTest {
 
     @Test
-    public void checkSelect() throws InterruptedException {
+    public void checkSelectFruit() {
 
         new BasePage()
                 .checkBasePageSelectBlock()
                 .clickOnSelectBlock()
                 .selectFruit(random.nextInt(5));
     }
+    @Test
+    public void checkSelectSuperhero() {
+
+        new BasePage()
+                .checkBasePageSelectBlock()
+                .clickOnSelectBlock()
+                .selectSuperhero();
+    }
+
 }

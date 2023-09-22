@@ -18,7 +18,7 @@ import static com.codeborne.selenide.Selenide.$;
 public class BaseTest {
 
     public Faker faker = new Faker();
-    public Random random = new Random();
+    public static Random random = new Random();
 
     private SelenideElement confirmation = $(byXpath("//p[normalize-space()='Consent']"));
 
