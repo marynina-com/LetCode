@@ -5,11 +5,10 @@ import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.support.ui.Select;
 
 import static com.codeborne.selenide.Selenide.$x;
-import static pages.BasePage.random;
 
 
 
-public class SelectPage {
+public class SelectPage extends BasePage{
     private static final SelenideElement fruit = $x("//select[@id='fruits']");
     private static final SelenideElement superhero = $x("//select[@id='superheros']");
 
@@ -34,4 +33,5 @@ public class SelectPage {
         selectedSuperhero.shouldBe(Condition.visible);
         return this;
     }
+
 }
