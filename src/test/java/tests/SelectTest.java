@@ -24,4 +24,22 @@ public class SelectTest extends BaseTest {
                 .selectSuperhero();
     }
 
+    @Test
+    public void checkLastProgrammingLanguage() {
+
+        new BasePage()
+                .checkBasePageSelectBlock()
+                .clickOnSelectBlock()
+                .selectLastProgrammingLanguage()
+                .printAllProgrammingLanguageOptions();
+    }
+
+    @Test
+    public void checkCountry() {
+
+        new BasePage()
+                .checkBasePageSelectBlock()
+                .clickOnSelectBlock()
+                .selectCountry("India");
+    }
 }
