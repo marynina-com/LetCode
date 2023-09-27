@@ -11,6 +11,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class BasePage {
 
     public final String BASE_URL = "https://letcode.in/test";
+    private final SelenideElement inputBlock= $x("//a[contains(text(),'Edit')]");
     private SelenideElement buttonBlock = $(byXpath("//a[normalize-space()='Click']"));
     private SelenideElement frameBlock = $(byXpath("//a[normalize-space()='Inner HTML']"));
     private final SelenideElement basePageSelectBlock = $x("//p[normalize-space()='Select']");
@@ -20,6 +21,10 @@ public class BasePage {
 
     public void openBaseUrl() {
         open(BASE_URL);
+    }
+
+    public void clickOnInputBlock() {
+        inputBlock.click();
     }
 
     public void clickOnButtonBlock() {

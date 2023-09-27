@@ -5,10 +5,7 @@ import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
 import com.github.javafaker.Faker;
 import org.testng.annotations.BeforeMethod;
-import pages.BasePage;
-import pages.ButtonPage;
-import pages.FramePage;
-import pages.HomePage;
+import pages.*;
 
 import java.util.Random;
 
@@ -23,6 +20,8 @@ public class BaseTest {
     private SelenideElement confirmation = $(byXpath("//p[normalize-space()='Consent']"));
 
     BasePage basePage = new BasePage();
+
+    InputPage inputPage = new InputPage();
     ButtonPage buttonPage = new ButtonPage();
     FramePage framePage = new FramePage();
     HomePage homePage = new HomePage();
