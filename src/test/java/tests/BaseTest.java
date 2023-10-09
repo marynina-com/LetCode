@@ -36,7 +36,7 @@ public class BaseTest {
         WebDriverRunner.getWebDriver().manage().window().maximize();
         confirmation.click();
 
-//      Configuration.holdBrowserOpen=true;
+      Configuration.holdBrowserOpen=true;
     }
 
 }

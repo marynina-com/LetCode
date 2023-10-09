@@ -8,22 +8,26 @@ import static pages.SelectPage.selectSize;
 public class SelectTest extends BaseTest {
 
     @Test
-    public void checkSelectFruit() {
+    public void checkSelectFruitNew() {
 
         new BasePage()
                 .checkBasePageSelectBlock()
                 .clickOnSelectBlock()
-                .selectFruit(random.nextInt(5));
+                .selectFruitNew(random.nextInt(5))
+                .checkSelectedFruit();
     }
+
     @Test
-    public void checkSelectSuperhero() {
+    public void checkSelectSuperheroNew() {
 
         new BasePage()
                 .checkBasePageSelectBlock()
                 .clickOnSelectBlock()
-                .selectSuperhero();
+                .selectSuperheroNew()
+                .checkSelectedSuperhero();
     }
 
+    //    Task: select the last programming language and print all the options
     @Test
     public void checkLastProgrammingLanguage() {
 
@@ -31,15 +35,19 @@ public class SelectTest extends BaseTest {
                 .checkBasePageSelectBlock()
                 .clickOnSelectBlock()
                 .selectLastProgrammingLanguage()
+                .checkLastProgrammingLanguage()
                 .printAllProgrammingLanguageOptions();
     }
 
+    //    Task: select India using value & print the selected value
     @Test
     public void checkCountry() {
 
         new BasePage()
                 .checkBasePageSelectBlock()
                 .clickOnSelectBlock()
-                .selectCountry("India");
+                .selectCountry("India")
+                .checkSelectedCountry("India")
+                .printSelectedCountry();
     }
 }
